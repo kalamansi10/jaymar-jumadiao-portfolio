@@ -37,25 +37,31 @@ const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project }) => {
   }
 
   function renderLiveLink() {
-    if (project.live_preview_link.length) {
-      return (
-        <a href={project.live_preview_link}>
-          <button
-            className="btn-1"
-            onClick={openLinkInNewTab}
-            value={project.live_preview_link}
-          >
-            Live Preview
-          </button>
-        </a>
-      );
-    } else {
-      return (
-        <a href="#">
-          <button className="btn-3">No Preview</button>
-        </a>
-      );
-    }
+    return (
+      <a href="#">
+        <button className="btn-3">No Preview</button>
+      </a>
+    );
+
+    // if (project.live_preview_link.length) {
+    //   return (
+    //     <a href={project.live_preview_link}>
+    //       <button
+    //         className="btn-1"
+    //         onClick={openLinkInNewTab}
+    //         value={project.live_preview_link}
+    //       >
+    //         Live Preview
+    //       </button>
+    //     </a>
+    //   );
+    // } else {
+    //   return (
+    //     <a href="#">
+    //       <button className="btn-3">No Preview</button>
+    //     </a>
+    //   );
+    // }
   }
 
   function openLinkInNewTab(

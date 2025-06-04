@@ -200,6 +200,124 @@ button {
 li {
   list-style-type: none;
 }
+
+:root {
+	/* Chat widget theme colors - using more subtle colors that match the portfolio */
+	--chat--color-primary: var(--text);
+	--chat--color-primary-shade-50: var(--text);
+	--chat--color-primary-shade-100: var(--text);
+	--chat--color-secondary: var(--background);
+	--chat--color-secondary-shade-50: var(--background);
+	--chat--color-white: var(--background);
+	--chat--color-light: var(--text);
+	--chat--color-light-shade-50: var(--text);
+	--chat--color-light-shade-100: var(--text);
+	--chat--color-medium: var(--text);
+	--chat--color-dark: var(--background);
+	--chat--color-disabled: #777980;
+	--chat--color-typing: var(--text);
+
+	/* Chat widget spacing and borders */
+	--chat--spacing: 0.75rem;
+	--chat--border-radius: 0.25rem;
+	--chat--transition-duration: 0.3s;
+
+	/* Chat window dimensions - more compact */
+	--chat--window--width: 320px;
+	--chat--window--height: 480px;
+
+	/* Chat header styling */
+	--chat--header-height: auto;
+	--chat--header--padding: 0.75rem;
+	--chat--header--background: var(--background);
+	--chat--header--color: var(--text);
+	--chat--header--border-top: none;
+	--chat--header--border-bottom: 1px solid var(--text);
+	--chat--heading--font-size: 1.25rem;
+	--chat--subtitle--font-size: 0.875rem;
+	--chat--subtitle--line-height: 1.4;
+
+	/* Chat input area */
+	--chat--textarea--height: 48px;
+	--chat--textarea--background: var(--background);
+	--chat--textarea--color: var(--text);
+	--chat--textarea--border: 1px solid var(--text);
+
+	/* Chat messages */
+	--chat--message--font-size: 0.875rem;
+	--chat--message--padding: 0.75rem;
+	--chat--message--border-radius: var(--chat--border-radius);
+	--chat--message-line-height: 1.4;
+	--chat--message--bot--background: var(--background);
+	--chat--message--bot--color: var(--text);
+	--chat--message--bot--border: 1px solid var(--text);
+	--chat--message--user--background: var(--text);
+	--chat--message--user--color: var(--background);
+	--chat--message--user--border: 2px solid var(--background);
+	--chat--message--pre--background: rgba(0, 0, 0, 0.05);
+
+	/* Chat toggle button */
+	--chat--toggle--background: var(--text);
+	--chat--toggle--hover--background: var(--text);
+	--chat--toggle--active--background: var(--text);
+	--chat--toggle--color: var(--background);
+	--chat--toggle--size: 48px;
+	--chat--toggle--border-radius: 50%;
+	--chat--toggle--box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat widget font family override */
+.chat-widget * {
+	font-family: "Martian Mono", monospace !important;
+}
+
+/* Chat widget animations */
+.chat-widget {
+	animation: fade-in var(--chat--transition-duration) cubic-bezier(0.05, 0.45, 0.67, 1);
+	border: 1px solid var(--text);
+}
+
+/* Chat message container styling */
+.chat-message {
+	transition: transform var(--chat--transition-duration) ease-out;
+	margin: 0.5rem 0;
+	position: relative;
+}
+
+/* Bot message styling */
+.chat-message--bot {
+	background-color: var(--background);
+	border: 1px solid var(--text);
+	border-radius: var(--chat--border-radius);
+	padding: var(--chat--message--padding);
+}
+
+/* User message styling */
+.chat-message--user {
+	background-color: var(--background);
+	border: 2px solid var(--text);
+	border-radius: var(--chat--border-radius);
+	padding: var(--chat--message--padding);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.chat-message--user .chat-message__content {
+	color: var(--text);
+}
+
+.chat-message:hover {
+	transform: translateY(-1px);
+}
+
+/* Chat widget responsive adjustments */
+@media (max-width: 720px) {
+	:root {
+		--chat--window--width: 100%;
+		--chat--window--height: 100vh;
+		--chat--toggle--size: 40px;
+	}
+}
+
 /* 
 * {
   outline: 1px solid red;

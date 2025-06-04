@@ -1,5 +1,21 @@
 [
   {
+    "name": "Juju The Chatbot",
+    "description": "Juju is an AI chatbot that utilizes n8n and Pinecone for its back-end. It provides a chat interface for users to interact with the chatbot to ask questions about Jaymar's background, projects, and other information.",
+    "technologies": [
+      "n8n",
+      "Pinecone",
+      "Gemini",
+      "Render"
+    ],
+    "source_code_link": "https://github.com/kalamansi10/jaymar-jumadiao-portfolio",
+    "live_preview_link": "https://jaymarjumadiao.com/",
+    "preview_images": [
+      "chat-1.webp",
+      "chat-2.webp"
+    ]
+  },
+  {
     "name": "Seed Mart",
     "description": "Seed Mart is an e-commerce website template that utilizes React.js for its front-end. It provides two back-end versions—one built with Ruby on Rails and the other with Node.js. The current website features user authentication, dynamic item search, an item cart, and basic checkout functionality. My goal is to create additional versions of both the front-end and back-end using different frameworks and languages while ensuring seamless compatibility between them.",
     "technologies": [
@@ -12,7 +28,8 @@
       "Node.js",
       "MongoDB",
       "Mongoose",
-      "Passport.js"
+      "Passport.js",
+      "Render"
     ],
     "source_code_link": "https://github.com/kalamansi10/seed-mart-front-reactjs",
     "live_preview_link": "https://seedmart.biz/",
