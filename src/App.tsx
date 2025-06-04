@@ -17,7 +17,7 @@ const App: React.FC = () => {
     if (!chatInitialized.current) {
       try {
         createChat({
-          webhookUrl: process.env.REACT_APP_CHAT_WEBHOOK_URL,
+          webhookUrl: import.meta.env.VITE_CHAT_WEBHOOK_URL,
           webhookConfig: {
             method: 'POST',
             headers: {}
